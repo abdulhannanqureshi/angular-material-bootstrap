@@ -1,0 +1,40 @@
+::ng-deep .custome-accordion .card-header {
+    padding: 0 0;
+    background: #19c3f3 !important;
+}
+::ng-deep .custome-accordion .card-header button {
+    position: relative;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+::ng-deep .custome-accordion .card-header button:hover,
+::ng-deep .custome-accordion .card-header button:focus{
+	text-decoration: none;
+	outline: 0;
+}
+::ng-deep .custome-accordion button[aria-expanded="true"]:before {
+    content: "";
+    background:  url(/assets/img/icon_minus.png) no-repeat scroll center center;
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    width: 20px;
+    background-size: 20px auto;
+    height: 20px;
+    z-index: 9999;
+    border-radius: 10px;
+}
+::ng-deep .custome-accordion .btn[aria-expanded="false"]:before {
+    background:  url(/assets/img/icon_plus.png) no-repeat scroll center center;
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    width: 20px;
+    background-size: 20px auto;
+    height: 20px;
+    z-index: 9999;
+    border-radius: 10px;
+}

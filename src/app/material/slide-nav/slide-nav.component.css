@@ -1,0 +1,23 @@
+.rel{
+	position: relative;
+}
+.header-fixed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    background: #025EBE;
+    padding: 30px;
+}
+.header-fixed h2{
+	font-size: 24px;
+    color: #fff;
+}
+.header-fixed h2 .mat-icon.material-icons{
+	cursor: pointer;
+    font-size: 30px;
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+}

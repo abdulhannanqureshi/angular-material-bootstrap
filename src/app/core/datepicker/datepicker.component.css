@@ -1,0 +1,4 @@
+::ng-deep .btn.btn-outline-secondary.calendar{
+	background: red url(/assets/img/icon_plus.png) no-repeat scroll center center;
+	background-size: 16px auto;
+}

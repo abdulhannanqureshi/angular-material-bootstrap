@@ -1,0 +1,115 @@
+/*Start style of ng-simple-slideshow 
+-------------------------------------*/
+::ng-deep .banner-wrapper .carousel-item img{
+    width: 100%;
+    height: calc(100vh - 144px);
+    object-fit: cover;
+}
+::ng-deep .banner-wrapper .slideshow-container{
+    height: calc(100vh - 144px) !important;
+}
+::ng-deep .slideshow-container .arrow-container:hover:before{
+	opacity: 0 !important;
+}
+::ng-deep .banner-wrapper .slideshow-container .arrow-container{
+    height: auto !important;
+    width: auto !important;
+    transform: translateY(-50%);
+    top: 50% !important;
+}
+::ng-deep .banner-wrapper .slideshow-container .arrow-container.prev{
+	left: 6px !important;
+}
+::ng-deep .banner-wrapper .slideshow-container .arrow-container.next{
+	right: 6px !important;
+}
+::ng-deep .banner-wrapper .slideshow-container .slick-dots li button:before{
+	width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;	
+}
+::ng-deep .banner-wrapper .slideshow-container .slick-dots li.slick-active button:before{
+	background: #000 !important;	
+}
+/*End style of ng-simple-slideshow 
+-------------------------------------*/
+/*******************************/
+/*Start style of owl carousel
+-------------------------------*/
+::ng-deep .banner-wrapper .owl-carousel .owl-item img {
+    height: calc(100vh - 144px);
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+/*Nav start
+-----------------*/
+::ng-deep .banner-wrapper .owl-nav{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+::ng-deep .banner-wrapper .owl-theme .owl-nav button{
+    margin: 0;
+    position: absolute;
+}
+::ng-deep .banner-wrapper .owl-theme .owl-nav button.owl-prev{
+    left: 6px;
+}
+::ng-deep .banner-wrapper .owl-theme .owl-nav button.owl-next{
+    right: 6px;
+}
+::ng-deep .banner-wrapper .owl-theme .owl-nav button span, 
+::ng-deep .banner-wrapper .owl-theme .owl-nav button .nav-btn {
+    display: block;
+    width: 62px;
+    height: 62px;
+    line-height: 62px;
+    text-indent: -9999px;
+}
+::ng-deep .banner-wrapper .owl-theme .owl-nav button.owl-prev span,
+::ng-deep .banner-wrapper .owl-theme .owl-nav button.owl-prev .nav-btn {
+    background: url("/assets/img/img_arrow1.png"); /*image of arrow*/
+    background-size:30px auto;
+    background-position: center center;
+    background-repeat: no-repeat; 
+}
+::ng-deep .banner-wrapper .owl-theme .owl-nav button.owl-next span,
+::ng-deep .banner-wrapper .owl-theme .owl-nav button.owl-next .nav-btn {
+    background: url("/assets/img/img_arrow2.png"); /*image of arrow*/
+    background-size:30px auto;
+    background-position: center center;
+    background-repeat: no-repeat; 
+}
+::ng-deep .banner-wrapper .owl-theme .owl-nav [class*=owl-]:hover,
+::ng-deep .banner-wrapper .owl-theme .owl-nav [class*=owl-]:focus {
+    outline: 0;
+    background: transparent;
+}
+/*Nav end
+-----------------*/
+/*Start Dots
+-----------------*/
+::ng-deep .banner-wrapper .owl-theme .owl-dots{
+    position: absolute;
+    width: 100%;
+    bottom: 16px;
+}
+::ng-deep .banner-wrapper .owl-theme .owl-dots .owl-dot span {
+    width: 16px;
+    height: 16px;
+    background: #19c3f3; /*all dots bg color*/
+}
+::ng-deep .banner-wrapper .owl-theme .owl-dots .owl-dot.active span, 
+::ng-deep .banner-wrapper .owl-theme .owl-dots .owl-dot:hover span {
+    background: #fff;  /*all dots active bg color*/
+}
+::ng-deep .banner-wrapper button:focus {
+    outline:0;
+}
+/*End Dots
+-----------------*/
+/*End style of owl carousel
+-------------------------------*/

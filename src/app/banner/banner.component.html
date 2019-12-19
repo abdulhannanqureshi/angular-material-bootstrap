@@ -1,0 +1,70 @@
+<div class="banner-wrapper">
+<!-- Bootstrap Slider Start -->
+	<!-- <ngb-carousel *ngIf="imagesBoot">
+	  <ng-template ngbSlide>
+	    <img [src]="imagesBoot[0]" alt="Random first slide">
+	    <div class="carousel-caption">
+	      <h3>First slide label</h3>
+	      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+	    </div>
+	  </ng-template>
+	  <ng-template ngbSlide>
+	    <img [src]="imagesBoot[1]" alt="Random second slide">
+	    <div class="carousel-caption">
+	      <h3>Second slide label</h3>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	    </div>
+	  </ng-template>
+	  <ng-template ngbSlide>
+	    <img [src]="imagesBoot[2]" alt="Random third slide"> 
+	    <div class="carousel-caption">
+	      <h3>Third slide label</h3>
+	      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+	    </div>
+	  </ng-template>
+	</ngb-carousel> -->
+<!-- Bootstrap Slider End -->
+
+<!-- ng-simple-slideshow start-->
+	<!-- <slideshow [height]="height"
+       [autoPlay]="flase"
+       [showArrows]="true"
+       [showDots]="true"
+       [imageUrls]="imageSources"
+       [lazyLoad]="imageSources?.length > 1"
+       [autoPlayWaitForLazyLoad]="true"
+       >
+	</slideshow> -->  
+	<!-- for this slider https://www.npmjs.com/package/ng-simple-slideshow -->
+<!-- ng-simple-slideshow End -->
+
+<!-- Single Image Owl Carousel Start -->
+	<owl-carousel [options]="mySlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" >
+		<div class="item" *ngFor="let image of mySlideImages;let i = index">
+			<div>
+				<img src={{image}}/>
+			</div>
+		</div>
+	</owl-carousel>
+
+	<!-- for owl carousel https://medium.com/@biswa8998/owl-carousel-with-angular-6-banner-slider-and-image-carousel-3b3ded0070c5 -->
+<!-- Single image Owl Carousel End -->
+
+<!-- Multiple image Owl Carousel Start -->
+ <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+    <div class="item" *ngFor="let image of images;let i= index">
+      <img class="slide-image" src="{{image.image}}" >
+      <div class="slide-text">
+        <h4>{{image.text}}</h4>
+      </div>
+    </div>
+  </owl-carousel>
+
+<!-- For multiple item slider https://www.freakyjolly.com/angular-7-6-adding-owl-carousel-2-image-and-content-slider-in-angular-application-with-custom-navigation-in-3-steps/ -->
+	<!-- Owl Carousel single or multiple same hai bas component me code alag hai comment me derkha hai   -->
+<!-- Multiple image Owl Carousel Start -->
+
+</div> 
+<!-- End Banner -->
+
+ 

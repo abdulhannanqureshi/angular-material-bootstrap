@@ -1,0 +1,20 @@
+<div class="warpper-datatable">
+    <table class="table" datatable [dtOptions]="dtOptions"
+      [dtTrigger]="dtTrigger">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.website }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- https://stackoverflow.com/questions/51363693/using-full-featured-datatables-plugin-with-angular-6 -->

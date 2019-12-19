@@ -1,0 +1,45 @@
+<header id="header">
+	<div id="headerIn" class="container"><!--id="headerIn"-->
+		<div class="row"><!--id="headerIn"-->
+			<h1 id="headerLogo" class="col-md-2 col-sm-6 col-6">
+				<!-- <a href="#" class="op"><img src="assets/img/img_logo.png" alt="Logo"></a> static Way -->
+				<!-- Property Binding Start-->
+					<!-- <a href="#" class="op"><img src="{{silcoLogo}}" alt="Logo"></a> one way -->
+					<!--  <a href="#" class="op"><img bind-src="silcoLogo" alt="Logo"></a> three way -->
+					<a routerLink="/about" class="op "><img [src]="silcoLogo" alt="Logo"></a> <!-- two way -->
+				<!-- Property Binding Start-->
+			</h1> 
+			<!--logo-->
+			<p class=" col-md-10 col-sm-6 col-6 navbarToggle visibleTS">
+				<i class="fas fa-bars" (click)="clickEvent()"></i>   <!-- (click)="clickEvent()" for click function toggle class--> 
+			</p>
+			<!-- [ngClass]="status ? 'success' : 'danger'" for toggle class -->
+			<div id="headerLinks" class="col-md-10 col-sm-6" [ngClass]="statusB ? 'showHeader' : 'hideHeader'">
+				<nav id="gNavi">
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a routerLink="/form">Form</a></li>
+						<li><a href="#">Features <i class="fas fa-chevron-right"></i></a>
+							<ul class="pulldownmenu">
+								<li><a href="#">Staff</a></li>
+								<li><a href="#">Contract <i class="fas fa-chevron-right"></i></a>
+									<ul class="pulldownmenu">
+										<li><a href="#">submenu</a></li>
+										<li><a href="#">submenu</a></li>
+										<li><a href="#">submenu</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">How it works</a></li>
+						<li><a routerLink="/material">material Design</a></li>
+						<li><a href="#">Team</a></li>
+						<li><a href="#">Blogs</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#" class="common-btn">Ico Wallet</a></li>
+					</ul>
+				</nav><!-- /#gNavi -->
+			</div><!-- headerLinks -->
+		</div>
+	</div>
+</header>

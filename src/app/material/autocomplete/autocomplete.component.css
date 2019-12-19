@@ -1,0 +1,17 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+::ng-deep .auto-wrapper .mat-form-field-label{
+	color: #19c3f3;
+}
+::ng-deep .auto-wrapper .mat-form-field-underline {
+    background-color: rgb(25, 195, 243);
+}
+::ng-deep .auto-wrapper .mat-form-field-ripple {
+    background-color: #414772;
+}

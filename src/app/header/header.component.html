@@ -1,0 +1,53 @@
+<header>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" routerLink="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+         <div class="navbar-nav">
+            <a class="nav-item nav-link active" routerLink="/page1">Page 1 <span class="sr-only">(current)</span></a>
+         </div>
+      </div>
+   </nav>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="progress">
+               <div class="progress-bar" style="width:70%"></div>
+            </div>
+            <!-- Progress bar  -->
+            <p>
+               <ngb-alert [dismissible]="false">
+               <strong>Warning!</strong> Better check yourself, you're not looking too good.
+               </ngb-alert>
+            </p>
+            <!-- Alert -->
+         </div>
+         <div class="col-lg-6">
+            <table class="table table-striped">
+               <thead>
+                  <tr>
+                     <th scope="col">#</th>
+                     <th scope="col">Country</th>
+                     <th scope="col">Area</th>
+                     <th scope="col">Population</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr *ngFor="let country of countries; index as i">
+                     <th scope="row">{{ i + 1 }}</th>
+                     <td>
+                        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
+                        {{ country.name }}
+                     </td>
+                     <td>{{ country.area | number }}</td>
+                     <td>{{ country.population | number }}</td>
+                  </tr>
+               </tbody>
+            </table>
+            <!--Table  -->
+         </div>
+      </div>
+   </div>
+</header>  

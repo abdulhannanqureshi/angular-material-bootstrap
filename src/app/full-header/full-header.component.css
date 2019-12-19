@@ -1,0 +1,166 @@
+/* !header
+---------------------------------------------------------- */
+#header {
+	padding: 12px 0;
+}
+#headerIn {
+	/* background: url("../img/img_car.png"); */
+	position: relative;
+}
+#headerLogo a{
+	display: inline-block;
+}
+#headerLogo a img{
+	width: 120px;
+}
+#headerLinks {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 991px) {
+	#headerIn > .row{
+		position: relative;
+	}
+	#headerLinks {
+	    align-items: normal;
+	    display: none;
+	   	justify-content: normal;
+	    position: absolute;
+	    top: 100%;
+	    left: 0;
+	    margin-top: 10px;
+	    background: rgba(0,0,0,0.7);
+	    max-width: 100%;
+	    flex: 0 0 100%;
+	    z-index: 99999;
+	    padding: 28px 12px 0;
+	    transition: all 0.5s ease;
+	}
+	#headerLinks.showHeader {
+		display: block;
+	}
+	#headerLinks.hideHeader {
+		display: none;
+	}
+}
+/* !gNavi
+---------------------------------------------------------- */		
+#gNavi {
+	padding: 20px 0;
+}
+#gNavi li {
+	margin-left: 30px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+#gNavi li a {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	text-decoration: none;
+	font-size:16px;
+	color: #414141;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 1.3;
+}
+#gNavi .pulldownmenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #fff;
+    box-shadow:0 0 3px 2px #ece6e6;
+    width: 200px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+#gNavi .pulldownmenu li {
+	margin-left: 0;
+	display: block;
+}
+#gNavi .pulldownmenu li a {
+	padding:12px 12px;
+	color: #000;
+}
+#gNavi .pulldownmenu li a:hover{
+	background: #19c3f3;
+	color: #fff;
+}
+#gNavi li:hover > .pulldownmenu{
+	display: block !important;
+}
+/* !Sebmenu
+---------------------------------------------------------- */
+::ng-deep #wrapper #gNavi .pulldownmenu li > .pulldownmenu {
+    display: none !important;
+    left: 100%;
+    z-index: 999;
+    top: -1px; 
+}
+::ng-deep #wrapper #gNavi .pulldownmenu li:hover > .pulldownmenu {
+	display: block !important;
+}
+#wrapper #gNavi .pulldownmenu li i {
+	float: right;
+}
+#wrapper #gNavi .pulldownmenu li:hover > .pulldownmenu{
+	display: block !important;
+}
+@media screen and (max-width: 1200px) {
+	#gNavi li {
+		margin-left: 22px;
+	}
+}
+@media screen and (max-width: 991px) {
+	::ng-deep #wrapper .navbarToggle {
+	    padding: 0 15px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: flex-end;
+	}
+	::ng-deep #wrapper .navbarToggle i {
+	    font-size: 34px;
+	    color: #000;
+	}
+	#gNavi {
+		display: block;
+		padding:0;
+		float: none;
+	}
+	#gNavi li {
+		display: block;
+	    text-align: center;
+	    margin: 0 0 16px;
+	}
+	#gNavi li a {
+		display: block;
+	    text-decoration: none;
+	    font-size: 16px;
+	    line-height: 20px;
+	    color: #fff;
+	    font-weight: 500;
+	}
+	#gNavi .pulldownmenu {
+	    display: none;
+	    position: static;
+	    padding: 0;
+	    width: 100%;
+	    background: transparent;
+	    box-shadow: none;
+	    text-align: center;
+	    margin: 16px 0 0;
+	}
+	#gNavi .pulldownmenu li { 
+		float: none;
+		margin-left: 0;
+	}
+	#gNavi .pulldownmenu li a {
+		color: #fff;
+		padding: 0;
+	}
+	#gNavi .pulldownmenu li a:hover {
+		background: transparent;
+	}
+
+}
